@@ -29,9 +29,14 @@ export default defineConfig({
             },
         }),
         tailwindcss(),
-        wayfinder({
-            formVariants: true,
-        }),
+
+        ...(process.env.VERCEL
+            ? []
+            : [
+                 wayfinder({
+                     formVariants: true,
+                 }),
+             ]),
         // Add Gzip and Brotli compression
         compression({ algorithm: 'gzip', exclude: [/\.(br)$/, /\.(gz)$/] }),
         compression({ algorithm: 'brotliCompress', exclude: [/\.(br)$/, /\.(gz)$/] }),
