@@ -758,7 +758,7 @@ export default function LandingPage() {
                 <div className="[border-radius:22px] [background:#fff] [border:1px_solid_#ececec] [box-shadow:0_4px_22px_rgba(0,0,0,0.06)] [overflow:hidden] [display:grid] [grid-template-columns:1.35fr_1fr] [align-items:stretch] max-[899px]:[grid-template-columns:1fr]">
                   <div className="[padding:22px] [background:#FAFAFA] [display:flex] [flex-direction:column] [justify-content:center]">
                     <div className="[border-radius:12px] [overflow:hidden] [border:1px_solid_#e5e7eb] [background:#fff] [box-shadow:0_4px_18px_rgba(0,0,0,0.09)] [line-height:0]">
-                      <img src="/assets/diagnostic.gif" alt="Tidak Lagi Bingung Harus Mulai dari Mana" className="[width:100%] [height:auto] [display:block]" />
+                      <img src="/assets/diagnostic.jfif" alt="Tidak Lagi Bingung Harus Mulai dari Mana" className="[width:100%] [height:auto] [display:block]" />
                     </div>
                   </div>
                   <div className="[padding:24px_26px] [display:flex] [flex-direction:column] [justify-content:center] [gap:11px]">
@@ -934,7 +934,7 @@ export default function LandingPage() {
                 <div className="[border-radius:22px] [background:#fff] [border:1px_solid_#ececec] [box-shadow:0_4px_22px_rgba(0,0,0,0.06)] [overflow:hidden] [display:grid] [grid-template-columns:1.35fr_1fr] [align-items:stretch] max-[899px]:[grid-template-columns:1fr]">
                   <div className="[padding:22px] [background:#FAFAFA] [display:flex] [flex-direction:column] [justify-content:center]">
                     <div className="[border-radius:12px] [overflow:hidden] [border:1px_solid_#e5e7eb] [background:#fff] [box-shadow:0_4px_18px_rgba(0,0,0,0.09)] [line-height:0]">
-                      <img src="/assets/beranda.gif" alt="Progresmu Terlihat, Bukan Cuma Terasa Sibuk" className="[width:100%] [height:auto] [display:block]" />
+                      <img src="/assets/beranda.jfif" alt="Progresmu Terlihat, Bukan Cuma Terasa Sibuk" className="[width:100%] [height:auto] [display:block]" />
                     </div>
                   </div>
                   <div className="[padding:24px_26px] [display:flex] [flex-direction:column] [justify-content:center] [gap:11px]">
