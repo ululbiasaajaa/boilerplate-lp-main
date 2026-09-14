@@ -1438,13 +1438,13 @@ export default function LandingPage() {
               
               <div className="[display:inline-flex] [gap:4px] [padding:5px] [border-radius:9999px] [background:#fff] [border:1px_solid_#ffb3b3] [box-shadow:0_2px_12px_rgba(215,8,8,0.08)]">
                 <button onClick={() => setMode('self')} style={css(toggleBtnStyle(mode === 'self'))}>Belajar Sendiri</button>
-                <button onClick={() => setMode('tutor')} style={css(toggleBtnStyle(mode === 'tutor'))}>Dibimbing Tutor<span className="[position:absolute] [top:-9px] [right:-6px] [display:flex] [align-items:center] [justify-content:center] [width:34px] [height:34px] [border-radius:9999px] [font-size:11px] [font-weight:900] [background:#F97316] [color:#fff] [border:2px_solid_#fff] [box-shadow:0_2px_8px_rgba(249,115,22,0.4)]">-80%</span></button>
+                <button onClick={() => setMode('tutor')} style={css(toggleBtnStyle(mode === 'tutor'))}>Dibimbing Tutor<span className="[position:absolute] [top:-9px] [right:-6px] [display:flex] [align-items:center] [justify-content:center] [width:34px] [height:34px] [border-radius:9999px] [font-size:11px] [font-weight:900] [background:#F97316] [color:#151515] [border:2px_solid_#fff] [box-shadow:0_2px_8px_rgba(249,115,22,0.4)]">-80%</span></button>
               </div>
             </div>
       
             <div className="[max-width:520px] [margin:0_auto_40px]">
               <div className="[border-radius:24px] [padding:28px] [display:flex] [flex-direction:column] [position:relative] [overflow:hidden] [border:2px_solid_#F5B700] [box-shadow:0_8px_32px_rgba(245,183,0,0.15)] [background:linear-gradient(165deg,#ffffff_0%,#fffbf0_100%)]">
-                <div className="[position:absolute] [top:0] [right:0] [font-size:12px] [font-weight:900] [padding:8px_16px] [border-bottom-left-radius:16px] [color:#FFFFFF] [background:#F5B700] [font-family:Nunito,sans-serif]">🔥 POPULAR</div>
+                <div className="[position:absolute] [top:0] [right:0] [font-size:12px] [font-weight:900] [padding:8px_16px] [border-bottom-left-radius:16px] [color:#151515] [background:#F5B700] [font-family:Nunito,sans-serif]">🔥 POPULAR</div>
                 <div className="[display:flex] [align-items:flex-start] [justify-content:space-between] [margin-bottom:4px] [margin-top:20px]">
                   <div>
                     <p className="[margin:0_0_4px] [font-size:12px] [font-weight:700] [text-transform:uppercase] [letter-spacing:0.08em] [color:#9ca3af]">E-Course</p>
