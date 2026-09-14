@@ -185,11 +185,13 @@ export default function LandingPage() {
   const [rpSelected, setRpSelected] = useState<number | null>(null);
   const [waBubbleOpen, setWaBubbleOpen] = useState<boolean>(false);
   const [showOverlay, setShowOverlay] = useState<boolean>(true);
+  const [lmsVideoOverlay, setLmsVideoOverlay] = useState<boolean>(true);
   const [countdown, setCountdown] = useState<string>('12:00:00');
   const [flashVisible, setFlashVisible] = useState<boolean>(true);
 
   const bannerRef = useRef<HTMLAnchorElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const lmsVideoRef = useRef<HTMLVideoElement | null>(null);
 
   /* pricing mode from ?mode=tutor */
   useEffect(() => { setMode(initialMode()); }, []);
@@ -270,6 +272,7 @@ export default function LandingPage() {
   const closeReturnPopup = useCallback((): void => setRpOpen(false), []);
   const toggleCat = useCallback((i: number): void => setActiveCat((cur) => (cur === FAQ_CATEGORIES[i] ? null : FAQ_CATEGORIES[i])), []);
   const playVideo = useCallback((): void => { if (videoRef.current?.paused) void videoRef.current.play(); }, []);
+  const playLmsVideo = useCallback((): void => { if (lmsVideoRef.current?.paused) void lmsVideoRef.current.play(); }, []);
   const dismissWaBubble = useCallback((): void => {
     setWaBubbleOpen(false);
     try { sessionStorage.setItem('fb_wa_bubble_v2', '1'); } catch { /* storage disabled */ }
@@ -737,14 +740,16 @@ export default function LandingPage() {
             </div>
       
             <div className="[max-width:840px] [margin:0_auto_44px]">
-              <div className="[position:relative] [border-radius:20px] [overflow:hidden] [background:#151515] [border:1px_solid_#e5e5e5] [box-shadow:0_8px_32px_rgba(0,0,0,0.12)] [aspect-ratio:16/9]">
-                <div className="[position:absolute] [inset:0] [display:flex] [flex-direction:column] [align-items:center] [justify-content:center] [gap:14px] [background:repeating-linear-gradient(135deg,#1c1c1c_0,#1c1c1c_14px,#191919_14px,#191919_28px)]">
-                  <span className="[display:flex] [align-items:center] [justify-content:center] [width:66px] [height:66px] [border-radius:9999px] [background:#D70808] [box-shadow:0_8px_26px_rgba(215,8,8,0.45)]">
-                    <span className="[display:block] [width:0] [height:0] [margin-left:5px] [border-style:solid] [border-width:13px_0_13px_21px] [border-color:transparent_transparent_transparent_#fff]"></span>
-                  </span>
-                  <p className="[margin:0] [font-size:14px] [font-weight:800] [font-family:Nunito,sans-serif] [color:#fff]">Putar showcase LMS</p>
-                  
-                </div>
+              <div className="[position:relative] [border-radius:20px] [overflow:hidden] [background:#151515] [border:1px_solid_#e5e5e5] [box-shadow:0_8px_32px_rgba(0,0,0,0.12)] [aspect-ratio:16/9] [cursor:pointer]" onClick={playLmsVideo}>
+                <video ref={lmsVideoRef} src="/assets/lms-tour.mp4" controls playsInline preload="none" onPlay={() => setLmsVideoOverlay(false)} className="[display:block] [width:100%] [height:100%] [object-fit:cover] [background:#151515]"></video>
+                {lmsVideoOverlay ? (<>
+                  <div className="[position:absolute] [inset:0] [display:flex] [flex-direction:column] [align-items:center] [justify-content:center] [gap:14px] [background:repeating-linear-gradient(135deg,#1c1c1c_0,#1c1c1c_14px,#191919_14px,#191919_28px)] [pointer-events:none]">
+                    <span className="[display:flex] [align-items:center] [justify-content:center] [width:66px] [height:66px] [border-radius:9999px] [background:#D70808] [box-shadow:0_8px_26px_rgba(215,8,8,0.45)]">
+                      <span className="[display:block] [width:0] [height:0] [margin-left:5px] [border-style:solid] [border-width:13px_0_13px_21px] [border-color:transparent_transparent_transparent_#fff]"></span>
+                    </span>
+                    <p className="[margin:0] [font-size:14px] [font-weight:800] [font-family:Nunito,sans-serif] [color:#fff]">Putar showcase LMS</p>
+                  </div>
+                </>) : null}
                 <div className="[position:absolute] [left:14px] [top:14px] [display:flex] [align-items:center] [gap:7px] [border-radius:9999px] [background:rgba(0,0,0,0.55)] [padding:7px_13px] [pointer-events:none]">
                   <span className="[display:block] [width:7px] [height:7px] [border-radius:9999px] [background:#D70808]"></span>
                   <span className="[font-size:11px] [font-weight:900] [letter-spacing:0.08em] [text-transform:uppercase] [color:#fff]">Showcase</span>
