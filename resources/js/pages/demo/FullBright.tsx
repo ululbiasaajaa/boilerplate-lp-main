@@ -474,7 +474,7 @@ export default function LandingPage() {
       
             <h2 className="[margin:0_0_20px] [text-align:center] [font-size:clamp(28px,3.6vw,42px)] [line-height:1.2] [font-weight:900] [font-family:Nunito,sans-serif] [color:#151515]">Sudah Banyak Belajar,<br /><span className="[color:#D70808]">Tapi Kenapa Skor Masih Stuck?</span></h2>
       
-            <p className="[margin:0_0_36px] [text-align:left] [font-size:11px] [line-height:1.6] [color:#6b6b6b]">Bukan karena kamu kurang berusaha. Hanya saja, <b>usahamu belum memberikan hasil yang diharapkan.</b></p>
+            <p className="[margin:0_0_36px] [text-align:center] [font-size:16px] [line-height:1.6] [color:#6b6b6b]">Bukan karena kamu kurang berusaha. Hanya saja, <b>usahamu belum memberikan hasil yang diharapkan.</b></p>
       
             <div className="[border-radius:20px] [background:#fff] [box-shadow:0_4px_24px_rgba(0,0,0,0.07)] [overflow:hidden] [margin-bottom:32px]">
               <div className="contents max-[559px]:hidden">
